@@ -1,0 +1,37 @@
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Nanum Barun Gothic', sans-serif;
+    font-size: 13px;
+    color: #141414;
+    background-color: #F5F5F5;
+}
+.fit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    /* margin: 0; */
+}
+table{
+    border: 1px solid #C6C6C6;
+    border-collapse: collapse;
+    background-color: #fefefe;
+    margin-bottom: 20px;
+}
+th, td{
+    border: 1px solid #C6C6C6;
+    padding: 5px;
+}
+.main-link{
+    display: inline-block;
+    text-decoration: none;
+    color: #7a76e0;
+    border: solid 1px #7a76e0;
+    padding: 5px 15px;
+    border-radius: 15px;
+}

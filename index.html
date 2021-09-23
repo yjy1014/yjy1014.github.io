@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <title>YeomJiyeong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo" class="header_link">
+                <a href="#">G0</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">ABOUT ME</a></li>
+                    <li><a href="#">MUSIC</a></li>
+                    <li><a href="#">ROADMAP</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="contents">
+        <section class="cnt01">
+            <div class="greeting"><h1></h1></div>
+            <img class="bg" src="https://i.ibb.co/4Yk2FyF/background01.png" alt="노트북배경이미지">
+        </section>
+        <section class="cnt02">
+            <div class="fit">
+                <img class="circle-01"src="https://i.ibb.co/PNkzhJf/circle-01.png" width="464px" height="133px">
+                <img class="circle-02"src="https://i.ibb.co/xhMyJ3R/circle-02.png" width="498px" height="150px">
+                <img class="line-01"src="https://i.ibb.co/2YBgGPX/line-01.png" width="208px" height="192px">
+                <img class="line-02"src="https://i.ibb.co/B4W2mW1/line-02.png" width="237px" height="187px">
+                <div class="container">
+                    <div class="fix">
+                        <h2>ABOUT ME</h2>
+                        <div class="items">
+                            <div class="ar-img">
+                                <img src="https://i.ibb.co/RpQYQq7/AR.png" width="267px" height="267px" alt="프로필 이미지">
+                            </div>
+                            <div class="info">
+                                <div class="intro">
+                                    <p>안녕하세요. 염지영입니다.</p>
+                                    <span>백엔드 개발자를 꿈꾸며 공부하고 있습니다.</span>
+                                </div>
+                                <table>
+                                    <tr><th>Name</th><td>염지영</td></tr>
+                                    <tr><th>Date of Birth</th><td>1994. 10. 14</td></tr>
+                                    <tr><th>E-mail</th><td><a class="email" href="mailto:jiyeong3@hanmail.net">jiyeong3@hanmail.net</a></td></tr>
+                                    <tr><th>Skils</th><td>(Front-end) HTML, CSS, JavaScript, JQuery<br>(Back-end) Java, OracleDB</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cnt03">
+            <div class="container">
+                <div class="center">
+                    <div class="music-text">
+                        <h2>MUSIC</h2>
+                        <p>좋아하는 노래들을 플레이리스트에 넣어보았어요. 즐겁게 들어주세요.</p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="music-container" id='music-container'>
+                            <div class="music-info">
+                                <h4 id="title"></h4>
+                                <div class="progress-container" id="progress-container">
+                                    <div class="progress" id="progress"></div>
+                                </div>
+                            </div>
+                            <audio src="music/dlwlrma.mp3" id="audio"></audio>
+                            <div class="img-container">
+                                <img src="images/dlwlrma.jpg" alt="music-cover" id="cover">
+                            </div>
+                            <div class="navigation">
+                                <button id="prev" class="action-btn">
+                                    <i class="fas fa-backward"></i>
+                                </button>
+                                <button id="play" class="action-btn action-btn-big">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button id="next" class="action-btn">
+                                    <i class="fas fa-forward"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cnt04">
+            <div class="fit">
+                <img class="circle-01"src="https://i.ibb.co/PNkzhJf/circle-01.png" width="464px" height="133px">
+                <img class="circle-02"src="https://i.ibb.co/xhMyJ3R/circle-02.png" width="498px" height="150px">
+                <img class="line-01"src="https://i.ibb.co/2YBgGPX/line-01.png" width="208px" height="192px">
+                <img class="line-02"src="https://i.ibb.co/B4W2mW1/line-02.png" width="237px" height="187px">
+                <div class="container">
+                    <div class="fix">
+                        <h2>ROADMAP</h2>
+                        <article class="roadmap-section">
+                            <section class="roadmap-contents understanding">
+                                <div class="icon">
+                                    <img src="https://i.ibb.co/MS0VMSb/understanding-icon.png" alt="동작원리 이해하기 아이콘">
+                                </div>
+                                <article>
+                                    <h3>동작원리를 이해하기</h3>
+                                    <p>브라우저 동작원리, JVM 동작원리, 가비지컬렉터 동작원리 등 동작원리를 제대로 이해하고 넘어가는 것이 중요하다 생각합니다. 동작원리에 대해 대충 넘어가면 제대로 이해하지 못한 부분에 문제가 발생했을 시 원리 자체를 놓치고 있기 때문에 쉽게 찾을 수 없습니다. 이러한 문제들이 쌓이지 않으려면 앞으로 배우는 과정속에서 동작원리를 제대로 이해하고 넘어가려합니다.</p>
+                                    <div class="space-120"></div>
+                                </article>
+                            </section>
+                            <section class="roadmap-contents data-structure">
+                                <div class="icon">
+                                    <img src="https://i.ibb.co/0FdDTJg/data-icon.png" alt="자료구조 및 알고리즘 아이콘">
+                                </div>
+                                <article>
+                                    <h3>자료구조 및 알고리즘</h3>
+                                    <p>코딩을 하며 동작은 되지만 더 효율적인 코드는 무엇일까 궁금할때가 많았습니다. 더 나은 코드를 작성하기 위해 자료구조와 알고리즘을 공부하며 바탕이 되는 지식을 쌓고 효율적인 문제해결 능력을 키우고 싶습니다.</p>
+                                </article>
+                            </section>
+                            <section class="roadmap-contents github">
+                                <div class="icon">
+                                    <img src="https://i.ibb.co/n1y7DRz/github-icon.png" alt="github 아이콘">
+                                </div>
+                                <article>
+                                    <h3>github 잔디밭을 채워보자</h3>
+                                    <p>꾸준히 개발하는 습관을 기르고 흔적을 남기기 위해 github을 활용하려 합니다. 잔디밭을 채우기 위한 의미없는 커밋은 절대 NO!</p>
+                                </article>
+                            </section>
+                            <section class="roadmap-contents t">
+                                <div class="icon">
+                                    <img src="https://i.ibb.co/rpjntQc/t-icon.png" alt="알파벳 T 아이콘">
+                                </div>
+                                <article>
+                                    <h3>현재 배우고 있는 개발 언어들을 깊숙하게 공부해나가며 새로운 언어를 접해보고 싶습니다.</h3>
+                                    <p>현재 배우고 있는 언어들을 바탕으로 깊이있게 공부해나가며 다양한 분야에 사용되고 있는 파이썬을 배워보고 싶습니다.</p>
+                                </article>
+                            </section>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/music.js"></script>
+</body>
+</html>
