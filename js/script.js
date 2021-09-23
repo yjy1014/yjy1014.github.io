@@ -35,13 +35,22 @@ var scroll = function(){
             moving(moveIndex);
             return false; 
         });
+        
+        // mousewheel, DOMMouseScroll이벤트는 비표준이다. 표준 wheel이벤트를 사용해야 한다.
         /**
          * 휠기능 만든것이 익스, 크롬, 오페라, 사파리에선 작동하지만 파이어폭스는 마우스휠 이벤트명이 다르다. 
          * 'mousewheel'이 아닌 'DOMMouseScroll'이라는 명칭 사용한다. 따라서 추가함
          * 스크롤 값을 활용한 코드 사용시에도 e.originalEvent.wheelDelta를 사용하였으나, 파이어폭스에선 e.originalEvent.detail를 사용한다.
          * 휠 다운시 파이어폭스를 제외한 브라우저에선 음수의 값을, 파이어폭스는 양수의 값을 돌려받는다.
          */
-        $cnt.on("mousewheel DOMMouseScroll", function(e){
+        // $cnt.on("mousewheel DOMMouseScroll", function(e){
+        //     if(time === false){ // time 변수가 펄스일때만 휠 이벤트 실행
+        //         wheel(e);
+        //     }
+        // });
+
+        // 표준 wheel이벤트를 사용
+        $cnt.on("wheel", function(e){
             if(time === false){ // time 변수가 펄스일때만 휠 이벤트 실행
                 wheel(e);
             }
@@ -78,10 +87,8 @@ var scroll = function(){
     };
     
     var wheel = function(e){
-        // console.log(e.originalEvent.detail);
-        // console.log(e.originalEvent.wheelDelta);
-        // wheelDelta 마우스 휠을 내리면 음수값 출력한다. 휠을 올리면 양수값 출력, detail은 이와 반대이다.
-        if(e.originalEvent.wheelDelta < 0 || e.originalEvent.detail > 0){ 
+        console.log(e.originalEvent.deltaY);
+        if(e.originalEvent.deltaY > 0){ 
             // 휠을 내릴 시 발생
             if(moveIndex < 3){
                 moveIndex += 1;
